@@ -24,6 +24,9 @@ app.use(`${apiPrefix}/tasks`, taskRouter);
 // added to for vercel
 app.get('/favicon.ico', (req, res) => res.status(204).end());
 
+app.get('/health',(req,res)=>{
+    res.status(200).json({message:`This is healthy ${new Date}`})
+})
 // Handle uncaught exceptions
 process.on('uncaughtException', (err) => {
     console.error('Uncaught Exception:', err.message);
