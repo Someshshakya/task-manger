@@ -21,6 +21,8 @@ const apiPrefix = `/${process.env.VERSION}/api`;
 app.use(`${apiPrefix}/users`, usersRouter);
 app.use(`${apiPrefix}/tasks`, taskRouter);
 
+// added to for vercel
+app.get('/favicon.ico', (req, res) => res.status(204).end());
 
 // Handle uncaught exceptions
 process.on('uncaughtException', (err) => {

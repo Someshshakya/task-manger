@@ -36,3 +36,4 @@ dist/
 
 # Debug
 debug.log 
+.vercel
